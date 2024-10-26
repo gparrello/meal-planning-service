@@ -27,6 +27,7 @@ services:
       POSTGRES_SERVER: postgres
       POSTGRES_PORT: 5432
       POSTGRES_DB: mealie
+      OPENAI_API_KEY: ""
     depends_on:
       postgres:
         condition: service_healthy
