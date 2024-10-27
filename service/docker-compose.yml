@@ -28,6 +28,12 @@ services:
       POSTGRES_PORT: 5432
       POSTGRES_DB: mealie
       OPENAI_API_KEY:
+      SMTP_HOST: smtp.gmail.com
+      SMTP_PORT: 587
+      SMTP_AUTH_STRATEGY: TLS
+      SMTP_FROM_EMAIL:
+      SMTP_USER:
+      SMTP_PASSWORD:
     depends_on:
       postgres:
         condition: service_healthy
