@@ -4,11 +4,11 @@ services:
     container_name: mealie
     restart: unless-stopped
     ports:
-        - "9925:9000" # 
+        - "9925:9000"
     deploy:
       resources:
         limits:
-          memory: 1000M # 
+          memory: 1000M
     volumes:
       - mealie-data:/app/data/
     environment:
@@ -27,6 +27,7 @@ services:
       POSTGRES_SERVER: postgres
       POSTGRES_PORT: 5432
       POSTGRES_DB: mealie
+      # Backend Settings
       OPENAI_API_KEY:
       SMTP_HOST: smtp.gmail.com
       SMTP_PORT: 587
