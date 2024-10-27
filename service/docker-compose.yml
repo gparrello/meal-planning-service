@@ -35,13 +35,13 @@ services:
       SMTP_USER:
       SMTP_PASSWORD:
     depends_on:
-      postgres:
+      mealie-db:
         condition: service_healthy
     dns:
       - 10.80.0.2
 
-  postgres:
-    container_name: postgres
+  mealie-db:
+    container_name: mealie-db
     image: postgres:15
     restart: unless-stopped
     volumes:
